@@ -1,0 +1,42 @@
+[
+  {
+    "title": "First Fully Pipelined High Throughput FPGA Implementation and GPU Optimization of Wider Variant of AES",
+    "authors": "Ahmet MALAL and Cihangir TEZCAN",
+    "year": 2025,
+    "venue": null,
+    "links": {
+      "pdf": "https://www.researchsquare.com/article/rs-6941414/v1",
+      "doi": "10.21203/rs.3.rs-6941414/v1"
+    }
+  },
+  {
+    "title": "High-Performance FPGA Implementations of Lightweight ASCON-128 and ASCON-128a With Enhanced Throughput-to-Area Efficiency",
+    "authors": "Ahmet Malal",
+    "year": 2024,
+    "venue": "17th International Conference on Information Security and Cryptology",
+    "links": {
+      "pdf": "https://ieeexplore.ieee.org/abstract/document/10779273",
+      "doi": null
+    }
+  },
+  {
+    "title": "FPGA-friendly compact and efficient AES-like 8x8 S-box",
+    "authors": "Ahmet Malal and Cihangir Tezcan",
+    "year": 2024,
+    "venue": "Microprocessors and Microsystems",
+    "links": {
+      "pdf": "https://www.sciencedirect.com/science/article/pii/S0141933124000024?casa_token=6EThXgKbF_IAAAAA:-JfBGpZX8qK5d9SxbDsys7qlGZt5tKvuVpn5O_tJ1fe1ADfr1VYUOomfD66PcIeKn8CTi4lImmg5",
+      "doi": null
+    }
+  },
+  {
+    "title": "Designing Efficient and Flexible NTT Accelerators",
+    "authors": "Ahmet Malal",
+    "year": 2023,
+    "venue": "Cryptology ePrint Archive",
+    "links": {
+      "pdf": "https://eprint.iacr.org/2023/1617",
+      "doi": null
+    }
+  }
+]

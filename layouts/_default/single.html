@@ -1,0 +1,28 @@
+{{ define "main" }}
+  <header class="page-header">
+    <h1 class="page-title">{{ .Title }}</h1>
+  </header>
+
+  <div class="section-layout">
+    <section class="section-profile">
+      <img class="section-profile__photo" src="/images/profile.jpg" alt="Ahmet Malal" />
+      <h2 class="section-profile__name">Ahmet Malal</h2>
+      <div class="social-icons" align="left">
+        {{- range site.Params.socialIcons }}
+          <a href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer me"
+             title="{{ (.title | default .name) | title }}">
+             {{ partial "svg.html" . }}
+          </a>
+        {{- end }}
+      </div>
+    </section>
+
+    <div class="post-content">
+      {{- if not (.Param "disableAnchoredHeadings") }}
+      {{- partial "anchored_headings.html" .Content -}}
+      {{- else }}{{ .Content }}{{ end }}
+    </div>
+  </div>
+{{ end }}
+
+

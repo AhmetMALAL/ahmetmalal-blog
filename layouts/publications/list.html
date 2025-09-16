@@ -1,0 +1,46 @@
+{{ define "main" }}
+  <header class="page-header">
+    <h1 class="page-title">{{ .Title }}</h1>
+  </header>
+
+  <div>
+    {{ $pubs := site.Data.publications }}
+    {{ if $pubs }}
+      <ul class="pub-list">
+      {{ range $pubs }}
+        <li class="pub-item">
+          {{ $title := .title }}
+          {{ $pdf := cond (isset . "links") (index .links "pdf") nil }}
+          {{ $doi := cond (isset . "links") (index .links "doi") nil }}
+          {{ $code := cond (isset . "links") (index .links "code") nil }}
+          {{ $scholar := printf "https://scholar.google.com/scholar?q=%s" ($title | urlquery) }}
+          {{ $year := .year }}
+
+          {{ with .authors }}
+            {{ $authors := replaceRE `(?i)ahmet\s+malal` `<strong>Ahmet Malal</strong>` . }}
+            <span class="pub-authors">{{ $authors | safeHTML }}</span>.
+          {{ end }}
+
+          {{ if $pdf }}
+            <em class="pub-title"><a href="{{ $pdf }}" target="_blank" rel="noopener">{{ $title }}</a></em>.
+          {{ else if $doi }}
+            <em class="pub-title"><a href="https://doi.org/{{ $doi }}" target="_blank" rel="noopener">{{ $title }}</a></em>.
+          {{ else }}
+            <em class="pub-title"><a href="{{ $scholar }}" target="_blank" rel="noopener">{{ $title }}</a></em>.
+          {{ end }}
+
+          {{ with .venue }} <em class="pub-venue">{{ . }}</em>{{ end }}
+          {{ if and $pdf (in $pdf "researchsquare.com") }}
+            <span class="pub-source"> · <a href="{{ $pdf }}" target="_blank" rel="noopener">Research Square</a></span>
+          {{ end }}
+          {{ with $year }} <span class="pub-year"> · {{ . }}</span>{{ end }}
+        </li>
+      {{ end }}
+      </ul>
+    {{ else }}
+      <p>No publications yet.</p>
+    {{ end }}
+  </div>
+{{ end }}
+
+

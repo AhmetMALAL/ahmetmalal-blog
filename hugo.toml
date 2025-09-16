@@ -1,28 +1,57 @@
 baseURL = "https://ahmetmalal.com/"
 title = "Ahmet Malal"
 theme = "PaperMod"
-languageCode = "tr"
+languageCode = "en"
 
 [params]
   defaultTheme = "light"
   ShowReadingTime = true
   ShowPostNavLinks = true
 
+  # Social Icons
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/ahmet-malal-17a342117/"
+
+  [[params.socialIcons]]
+    name = "googlescholar"
+    url = "https://scholar.google.com/citations?user=FGRibN8AAAAJ&hl=tr"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/AhmetMALAL"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:ahmetmalal2014@outlook.com"
+
 [menu]
   [[menu.main]]
     identifier = "home"
-    name = "Ana Sayfa"
+    name = "Home"
     url = "/"
     weight = 1
+
+  [[menu.main]]
+    identifier = "publications"
+    name = "Publications"
+    url = "/publications/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "games"
+    name = "Games"
+    url = "/games/"
+    weight = 3
 
   [[menu.main]]
     identifier = "blog"
     name = "Blog"
     url = "/posts/"
-    weight = 2
+    weight = 4
 
   [[menu.main]]
-    identifier = "rss"
-    name = "RSS"
-    url = "/index.xml"
-    weight = 3
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 5

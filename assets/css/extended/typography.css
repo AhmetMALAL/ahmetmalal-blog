@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+
+html,
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+  font-weight: 700;
+}
+
+.post-title, .single-title, .site-title {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+}
+
+.post-content {
+  line-height: 1.75;
+  font-size: 1.02rem;
+  font-weight: 300;
+}
+
+.pub-list {
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.pub-item .pub-title a { text-decoration: underline; }
+.pub-item .pub-title a { color: #1a73e8; }
+.pub-item .pub-title a:hover { color: #1558b0; }
+.pub-item .pub-links { font-size: 0.95em; }
+.pub-item .pub-links a { text-decoration: underline; }
+
+
+/* Publications profile header */
+.pub-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.pub-profile__photo {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.pub-profile__name {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+/* Two-column layout for publications page */
+.pub-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 1.5rem;
+}
+
+.pub-layout .pub-profile {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.pub-layout .social-icons a {
+  margin-right: 0.25rem;
+}
+
+/* Shared two-column layout for sections (Home/About) */
+.section-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 1.5rem;
+}
+.section-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.section-profile__photo {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+.section-profile__name {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.4rem;
+}
+.section-layout .social-icons a { margin-right: 0.25rem; }
+
