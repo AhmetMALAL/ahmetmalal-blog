@@ -1,0 +1,28 @@
+baseURL = "https://ahmetmalal.com/"
+title = "Ahmet Malal"
+theme = "PaperMod"
+languageCode = "tr"
+
+[params]
+  defaultTheme = "light"
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Ana Sayfa"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/posts/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "rss"
+    name = "RSS"
+    url = "/index.xml"
+    weight = 3
